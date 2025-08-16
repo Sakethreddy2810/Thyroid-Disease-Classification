@@ -1,0 +1,9 @@
+![image_alt](https://github.com/Sakethreddy2810/Thyroid-Disease-Classification/blob/b55368337af66b0e7500642ed14fda9556c79dce/Blue%20Illustrated%20Independence%20Day%20Instagram%20Post.png)
+
+# Check for missing values
+print(df.isnull().sum())
+# Fill missing numerical values with the column mean
+df.fillna(method='ffill', inplace=True) # Forward fill for stock data continuity
+df.fillna(0, inplace=True) # Replace remaining missing dividends/splits with 0
+# Confirm no missing values remain
+print(df.isnull().sum())
